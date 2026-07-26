@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>iMinistry — Ministry Accountability Register</title>
+<meta name="description" content="A nonpartisan, citizen-run register tracking every Union Ministry of India on transparency, delivery, responsiveness and fiscal discipline — sourced facts only, no politicians named." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%231f3d5c%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23eeebe0%22 font-family=%22Georgia,serif%22 font-weight=%22bold%22>i</text></svg>" />
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="brand"><span class="dot">i</span><span>Ministry</span></div>
+    <nav class="nav-links">
+      <a href="#ministries">Ministries</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#contribute">Contribute</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#contribute">File a report</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Civic Record · Established 2026</div>
+      <h1>Every ministry.<br /><span class="accent">One open file.</span></h1>
+      <p class="lede">
+        iMinistry keeps a public file on the <strong>work of India's Union Ministries</strong> —
+        not the politicians who pass through them. Every entry is stamped only when it carries a
+        public, checkable source: an audit report, an RTI reply, a parliamentary record. No source,
+        no stamp. No individuals named.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#ministries">Open the register</a>
+        <a class="btn btn-ghost" href="#methodology">Read the standard</a>
+      </div>
+    </div>
+    <div class="stamp-rack" aria-hidden="true">
+      <span class="caption">Specimen stamps</span>
+      <span class="stamp rated">7.2 / 10</span>
+      <span class="stamp unrated">unrated</span>
+      <span class="stamp rated">4.8 / 10</span>
+      <span class="stamp unrated">unrated</span>
+      <span class="stamp rated">9.1 / 10</span>
+    </div>
+  </section>
+</div>
+
+<section class="section wrap" id="ministries">
+  <div class="section-head">
+    <h2>The register</h2>
+    <p class="sub">Every Union Ministry, filed by mandate. Open a card for its watch areas and sourced citations.</p>
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="search" type="search" placeholder="Search ministries or issues — e.g. 'exam', 'railways', 'health'" aria-label="Search ministries" />
+    <span class="count-pill" id="count-pill"></span>
+  </div>
+
+  <div class="grid" id="ministry-grid"></div>
+</section>
+
+<section class="section wrap" id="methodology">
+  <div class="section-head">
+    <h2>How a stamp is earned</h2>
+    <p class="sub">Four pillars, each 0–10. No source attached, no stamp issued.</p>
+  </div>
+
+  <div class="pillars-explainer">
+    <div class="explainer-card">
+      <span class="num">01</span>
+      <h3>Transparency</h3>
+      <p>Does the ministry publish its own data, answer RTI requests on time, and respond fully to Parliament questions?</p>
+    </div>
+    <div class="explainer-card">
+      <span class="num">02</span>
+      <h3>Delivery</h3>
+      <p>Are stated scheme targets — roads built, exams held, funds disbursed — actually met, per official or audit data?</p>
+    </div>
+    <div class="explainer-card">
+      <span class="num">03</span>
+      <h3>Responsiveness</h3>
+      <p>When something fails publicly, how fast and how substantively does the ministry act?</p>
+    </div>
+    <div class="explainer-card">
+      <span class="num">04</span>
+      <h3>Fiscal discipline</h3>
+      <p>What do CAG reports and budget-versus-actual data say about how public money was used?</p>
+    </div>
+  </div>
+
+  <div class="rules-box">
+    <strong>The one rule that overrides everything else</strong>
+    iMinistry rates <em>ministries</em>, never people. Every stamp requires a public, checkable
+    source — a CAG report, an RTI reply, a Lok Sabha / Rajya Sabha answer, a PIB release, a court
+    order, or a dated news report with a link. Unsourced claims are rejected, not published. See
+    the full rubric in <a href="METHODOLOGY.md">METHODOLOGY.md</a>.
+  </div>
+</section>
+
+<section class="section wrap" id="contribute">
+  <div class="section-head">
+    <h2>File a sourced update</h2>
+    <p class="sub">This is a volunteer, open-source register. Anyone can submit a fact, provided it carries a source.</p>
+  </div>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://github.com/borannavar1984/iMinistry/issues/new?labels=sourced-update" target="_blank" rel="noopener">Open an issue with a source</a>
+    <a class="btn btn-ghost" href="CONTRIBUTING.md">Read the contribution guide</a>
+  </div>
+</section>
+
+<footer class="site wrap">
+  <div class="colophon">
+    <p>iMinistry is an independent, nonpartisan, volunteer-run civic register. It is not
+    affiliated with any political party or the Government of India. Every entry is sourced and
+    correctable — see <a href="CONTRIBUTING.md">how to flag an error</a>.</p>
+    <span class="ref">© <span id="year"></span> · REG/CIVIC/OPEN</span>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+</div>
+
+<script src="data/ministries.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
